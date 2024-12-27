@@ -1,0 +1,3 @@
+# Silent Overflow in Assembly Memory Access
+
+This repository demonstrates a subtle bug in assembly language related to silent integer overflow during memory address calculation.  The `mov eax, [ebx+ecx*4]` instruction is vulnerable to overflow if `ecx` is large.  This can lead to unpredictable program behavior without any explicit error indication. The solution demonstrates how to mitigate this by explicitly checking for potential overflow before performing the memory access.
