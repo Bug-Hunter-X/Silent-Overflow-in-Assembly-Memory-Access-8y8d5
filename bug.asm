@@ -1,0 +1,3 @@
+mov eax, [ebx+ecx*4]
+
+This instruction attempts to access memory at an address calculated as ebx + ecx*4.  However, if ecx is a very large value, the result of the calculation may overflow, leading to an access violation or unpredictable behavior.  The overflow is silent; no exception is raised.  The program might crash, produce corrupted data, or appear to work correctly in some cases and fail in others.
